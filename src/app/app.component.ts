@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FirebaseService} from "../core/services/firebase.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'chatApp';
+
+constructor(private fbs: FirebaseService) {
+}
+
+
+  signUp(email: string, password: string) {
+    this.fbs.signUp(email, password);
+  }
 }
