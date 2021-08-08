@@ -13,7 +13,5 @@ constructor(private fbs: FirebaseService) {
 }
 
 
-  signUp(email: string, password: string) {
-    this.fbs.signUp(email, password);
-  }
+
 }
